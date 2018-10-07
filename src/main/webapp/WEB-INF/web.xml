@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+        http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <display-name>MyFirstServlet</display-name>
+
+    <filter>
+        <filter-name>InnerFilter</filter-name>
+        <filter-class>ru.innopolis.stc12.servlets.controllers.filters.InnerFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>InnerFilter</filter-name>
+        <url-pattern>/inner/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>Students</servlet-name>
+        <servlet-class>ru.innopolis.stc12.servlets.controllers.StudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Students</servlet-name>
+        <url-pattern>/students</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>ru.innopolis.stc12.servlets.controllers.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Dashboard</servlet-name>
+        <servlet-class>ru.innopolis.stc12.servlets.controllers.DashboardController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Dashboard</servlet-name>
+        <url-pattern>/inner/dashboard</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddStudent</servlet-name>
+        <servlet-class>ru.innopolis.stc12.servlets.controllers.AddStudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddStudent</servlet-name>
+        <url-pattern>/addStudent</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Registration</servlet-name>
+        <servlet-class>ru.innopolis.stc12.servlets.controllers.RegistrationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Registration</servlet-name>
+        <url-pattern>/registration</url-pattern>
+    </servlet-mapping>
+</web-app>
